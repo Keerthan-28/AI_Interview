@@ -27,7 +27,13 @@ Responsibilities:
                 setStep(2);
             } catch (error) {
                 console.error(error);
-                alert("Failed to upload resume");
+                if (error.response) {
+                    alert(`Upload failed: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
+                } else if (error.message) {
+                    alert(`Upload failed: ${error.message} (Often due to CORS or wrong API URL)`);
+                } else {
+                    alert("Failed to upload resume");
+                }
             }
             setLoading(false);
         }
