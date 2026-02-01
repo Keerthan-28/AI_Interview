@@ -131,5 +131,4 @@ Hack2Interveiw/
 
 ---
 
-**Built with ❤️ for Hack2Hire**
-#
+
