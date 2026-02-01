@@ -125,15 +125,11 @@ Hack2Interveiw/
 └── README.md                # Project Documentation
 ```
 
-## ⚠️ Notes for Hackathon Judges
-- **AI Logic**: The current iteration uses a **heuristic-based mock AI** for stability and speed during demos (no API keys required). It deterministically scores based on answer length and keywords to demonstrate the *adaptive architecture* without incurring LLM costs.
-- **Persistence**: Sessions are stored in-memory on the backend. Restarting the backend server will clear active sessions.
-
-
 https://github.com/user-attachments/assets/c3d06176-ccf3-4819-af55-a61653588d60
 
 
 ---
+
 
 
 
