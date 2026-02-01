@@ -28,7 +28,11 @@ Responsibilities:
             } catch (error) {
                 console.error(error);
                 if (error.response) {
-                    alert(`Upload failed: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
+                    if (error.response.status === 404) {
+                        alert(`Upload failed (404). \n\nCheck your VITE_API_URL in Vercel settings.\nIt MUST end with "/api" (e.g., ...onrender.com/api).`);
+                    } else {
+                        alert(`Upload failed: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
+                    }
                 } else if (error.message) {
                     alert(`Upload failed: ${error.message} (Often due to CORS or wrong API URL)`);
                 } else {

@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+// Normalize URL: remove trailing slash, ensure it ends with /api
+let rawUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+if (rawUrl.endsWith('/')) rawUrl = rawUrl.slice(0, -1);
+if (!rawUrl.endsWith('/api')) rawUrl += '/api';
+const API_URL = rawUrl;
 
 export const uploadResume = async (file) => {
     const formData = new FormData();
