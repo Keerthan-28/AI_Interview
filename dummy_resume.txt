@@ -1,0 +1,4 @@
+John Doe
+Full Stack Developer
+Skills: React, Node.js, Python, SQL, Docker
+Experience: Built scalable web apps.
